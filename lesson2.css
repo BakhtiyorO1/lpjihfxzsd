@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #1E1E1E;
+}
+nav .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.nav-menu1 {
+    list-style: none;
+    display: flex;
+}
+nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 15px;
+    transition: 0.7s ease;
+}
+nav ul li a:hover {
+    color: red;
+}
+.burgermenu{
+    display: none;
+    cursor: pointer;
+    margin-left: 100%;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    overflow: hidden;
+    height: 30px;
+    min-height: 70px;
+}
+nav div {
+    display: flex;
+}
+hr {
+    margin: -30px auto 10px;
+	padding: 0;
+	height: 50px;
+	border: none;
+	border-bottom: 1px solid #1f1209;
+	box-shadow: 0 20px 20px -20px #333;
+	width: 100%;
+}
+header {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+header section .top-text h3 {
+    color: gray;
+}
+header section .top-text .lesson2 {
+    font-size: 3rem;
+    color: red;
+    text-align: center;
+}
+header section {
+    background-color: aliceblue;
+    width: 78%;
+    padding: 20px;
+}
+header aside {
+    background-color: gray;
+    width: 20%;
+    padding: 20px;
+}
+header .middle-text p {
+    color: green;
+}
+header section .text .img-header {
+    width: 100%;
+}
+header aside {
+    width: 29%;
+    border: 2px solid black;
+    border-radius: 40px;
+    color: teal;
+}
+header aside div h1 {
+    color: gold;
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px;
+    }
+    header {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    header section {
+        width: 90%;
+    }
+    header aside {
+        width: 90%;
+        padding: 20px;
+    }
+    header aside .text-aside {
+        width: 100%;
+    }
+    header aside .links {
+        width: 100%;
+    }
+    header aside .links h1 {
+        width: 100%;
+    }
+    header aside .text-aside h1 {
+        width: 100%;
+    }
+    .burgermenu{
+        display: block;
+    }
+    .burgermenu.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .burgermenu.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .burgermenu.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    nav ul {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #1E1E1E;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s; 
+    }
+    nav ul li {
+        margin: 16px 0;
+    }
+    nav ul.active{
+        left: 0;
+    }   
+}
